@@ -31,7 +31,7 @@ gulp.task('default', ['watch:all', 'browser-sync'],function() {
 gulp.task('watch:all', ['watch']);
 
 gulp.task('watch', function() {
-  gulp.watch('./dist/scss/**/*.scss', ['styles']);
+  gulp.watch('./dist/sass/**/*.scss', ['styles']);
   gulp.watch('./dist/js/**/*.js', ['scripts']);
   gulp.watch('./dist/pug/**/*.pug', ['pug']);
   gulp.watch('./src/**.html').on('change', reload);

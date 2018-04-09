@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Aileron';
+
+  --primary-color       :   #e4e4e4;
+  --secondary-color     :   #17BA98;
+  --btn-primary-color   :   #00995d;
+  --link-primary-color  :   #1EACD9;
+  --white               :   #FFFFFF;
+  --black               :   #292828;
+  --light-grey          :   #F1F1F1;
+  --medium-grey         :   #EBEBEB;
+  --strong-grey         :   #616161;
+
+  --positivo            :   #0acd47;
+  --negativo            :   #fc0000;
+
+  --border-radius       :   6px;
+  --box-shadow          :   1px 1px 6px 1px rgba(64, 64, 64, 0.05);
+}
+
+body{
+  background-color: var(--black);
+  height: 100vh;
+  padding: 3rem;
+}
+
+p,h1{
+  color: white;
+}
