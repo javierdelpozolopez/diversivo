@@ -28,9 +28,17 @@
 body{
   background-color: var(--black);
   height: 100vh;
-  padding: 3rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+@media only screen and (max-width: 780px){
+ h1{
+   font-size: 1.5rem;
+ }
 }
 
 p,h1{
-  color: white;
+  color: var(--white);
 }
