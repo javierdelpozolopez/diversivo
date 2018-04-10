@@ -54,8 +54,10 @@
   --box-shadow:   1px 1px 6px 1px rgba(64, 64, 64, 0.05); }
 
 body {
-  background-color: var(--black);
-  height: 100vh; }
+  height: 100vh;
+  background: url("../img/fondo.jpg");
+  background-position: center;
+  background-size: cover; }
 
 h1 {
   font-size: 3rem; }
@@ -107,21 +109,30 @@ p, h1 {
   .grid-4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "header1 header2 header3 header4" "center2 center center center4" "footer1 footer2 footer3 footer4";
-    grid-gap: 3px; }
+    grid-template-areas: "header1 header2 header3 header4" "center2 center center3 center4" "footer1 footer2 footer3 footer4";
+    grid-gap: 10px; }
 
 .box {
   padding: 1rem;
-  border-left: 1px solid var(--white); }
+  border-left: 2px solid var(--black);
+  background: linear-gradient(45deg, rgba(24, 24, 24, 0.65), transparent); }
 
 .direction {
-  grid-area: footer3; }
+  grid-area: footer3;
+  border-left: 0;
+  border-bottom: 2px solid var(--black);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(24, 24, 24, 0.65)), to(transparent));
+  background: linear-gradient(0deg, rgba(24, 24, 24, 0.65), transparent); }
 
 .servicios {
   grid-area: header4; }
 
 .contacto {
-  grid-area: center; }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 24, 24, 0.65)), to(transparent));
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.65), transparent);
+  grid-area: center;
+  border-left: 0;
+  border-top: 2px solid var(--black); }
 
 span {
   font-weight: 700; }

@@ -26,8 +26,11 @@
 }
 
 body{
-  background-color: var(--black);
+  //background-color: var(--black);
   height: 100vh;
+  background: url("../img/fondo.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 h1{

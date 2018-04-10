@@ -9,6 +9,7 @@
   ". header ."
   ". main ."
   ". footer .";
+
   header.container__header{
     grid-area: header;
     align-self: center;
@@ -38,23 +39,42 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "header1 header2 header3 header4"
-    "center2 center center center4"
+    "center2 center center3 center4"
     "footer1 footer2 footer3 footer4";
-    grid-gap: 3px;
+    grid-gap: 10px;
   }
 }
 .box{
   padding: 1rem;
-  border-left: 1px solid var(--white);
+  border-left: 2px solid var(--black);
+  background: linear-gradient(
+                    45deg,
+                    rgba(24, 24, 24, 0.65),
+                    rgba(0, 0, 0, 0)
+                    );
 }
 .direction{
   grid-area: footer3;
+  border-left: 0;
+  border-bottom: 2px solid var(--black);
+  background: linear-gradient(
+                    0deg,
+                    rgba(24, 24, 24, 0.65),
+                    rgba(0, 0, 0, 0)
+                    );
 }
 .servicios{
   grid-area: header4;
 }
 .contacto{
+  background: linear-gradient(
+                    180deg,
+                    rgba(24, 24, 24, 0.65),
+                    rgba(0, 0, 0, 0)
+                    );
   grid-area: center;
+  border-left: 0;
+  border-top: 2px solid var(--black);
 }
 
 span {
