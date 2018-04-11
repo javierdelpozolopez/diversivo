@@ -26,22 +26,30 @@
 }
 
 body{
-  //background-color: var(--black);
+  background-color: var(--black);
   height: 100vh;
-  background: url("../img/fondo.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 h1{
   font-size: 3rem;
 }
+h2{
+  font-size: 2rem;
+  font-weight: 100;
+}
+pre{
+  font-size: .7rem;
+  font-weight: 400;
+}
 @media only screen and (max-width: 780px){
  h1{
    font-size: 1.5rem;
  }
+ h2{
+   font-size: 1rem;
+ }
 }
 
-p,h1{
+p,h1,h2,span,pre{
   color: var(--white);
 }

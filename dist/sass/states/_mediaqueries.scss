@@ -1,0 +1,26 @@
+@media only screen and (max-width: 680px){
+
+  .grid{
+    &-main{
+      grid-template-areas:
+      ". description description description number-page"
+      ". . . contacto number-page"
+      ". . direction direction number-page";
+      grid-gap: 1px;
+    }
+    &-services{
+      height: 80vh;
+      grid-template-columns: 1fr 1fr auto;
+      grid-template-rows: 20px 1fr 120px 120px;
+      grid-template-areas:
+      "box-title box-title number-page"
+      "description description number-page"
+      "service1 service2 number-page"
+      "service3 service4 number-page";
+    }
+  }
+  .service{
+    font-size: .6rem;
+  }
+
+}

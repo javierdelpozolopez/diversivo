@@ -26,7 +26,7 @@
     border: 3px solid var(--white);
     .main-content{
       margin-top: 1rem;
-      height: 30%;
+      min-height: 60vh;
     }
   }
   footer{
@@ -36,49 +36,80 @@
 
 .grid{
   display: grid;
-  &-4{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  &-main{
+    grid-template-columns: 1fr 4fr 2fr 1fr auto;
+    grid-template-rows: auto;
     grid-template-areas:
-    "header1 header2 header3 header4"
-    "center2 center center3 center4"
-    "footer1 footer2 footer3 footer4";
-    grid-gap: 10px;
+    ". description description . number-page"
+    ". . . contacto number-page"
+    ". . direction direction number-page";
+    grid-gap: 5px;
+  }
+  &-services{
+    height: 80vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-rows: 20px 1fr 180px;
+    grid-template-areas:
+    "box-title box-title box-title . number-page"
+    "description description description description number-page"
+    "service1 service2 service3 service4 number-page";
+    grid-gap: 1px;
   }
 }
-.box{
-  padding: 1rem;
-  border-left: 2px solid var(--black);
-  background: linear-gradient(
-                    45deg,
-                    rgba(24, 24, 24, 0.65),
-                    rgba(0, 0, 0, 0)
-                    );
+
+
+.box-title{
+  grid-area: box-title;
+}
+.description{
+  padding-top: 10px;
+  grid-area: description;
 }
 .direction{
-  grid-area: footer3;
-  border-left: 0;
-  border-bottom: 2px solid var(--black);
-  background: linear-gradient(
-                    0deg,
-                    rgba(24, 24, 24, 0.65),
-                    rgba(0, 0, 0, 0)
-                    );
+  grid-area: direction;
 }
-.servicios{
-  grid-area: header4;
+.number-page{
+  grid-area: number-page;
+  align-self: flex-start;
+  justify-self: end;
+  height: 100%;
+  border-right: 1px solid white;
 }
 .contacto{
-  background: linear-gradient(
-                    180deg,
-                    rgba(24, 24, 24, 0.65),
-                    rgba(0, 0, 0, 0)
-                    );
-  grid-area: center;
-  border-left: 0;
-  border-top: 2px solid var(--black);
+  grid-area: contacto;
+}
+
+.service{
+  align-self: stretch;
+  justify-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  background-color: var(--white);
+  h3{
+    color: var(--black);
+  }
+  &-1{
+    grid-area: service1
+  }
+  &-2{
+    grid-area: service2
+  }
+  &-3{
+    grid-area: service3
+  }
+  &-4{
+    grid-area: service4
+  }
 }
 
 span {
   font-weight: 700;
+}
+
+.container-2{
+  width: 100%;
+  min-height: 50vh;
 }
