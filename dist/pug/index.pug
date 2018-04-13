@@ -9,7 +9,7 @@ html(lang="es")
     link(rel="shortcut icon" href="assets/img/favicon.png")
     title Diversivo | Agencia de Medios Digitales
 
-  body.app 
+  body.app.services__bg#app
     header.container__header
       img.logo(src="assets/img/svg/diversivo.svg" alt="logo")
 
@@ -28,13 +28,13 @@ html(lang="es")
     
       article.container-2
         .main-content.grid.grid-services
-            .box.box-title 
+            .box.box-title.services#services
               h1 Servicios
-            .box.description
-                h2 Para todos los gustos
-            .box.service.service-1
+            .box.description.services#services-desc
+              h2 Todos te van a decir que son los mejores. Nosotros la tenemos clara: Lo que nos hace diferentes es una sola cosa; Nunca nos Aburrimos.
+            .box.service.service-1#service-1
               h3 Aplicaciones y Video juegos
-            .box.service.service-2
+            .box.service.service-2#service-2
               h3 Social Media y Marketing
             .box.service.service-3
               h3 Desarrollo Web
@@ -45,4 +45,13 @@ html(lang="es")
                   p
                     span 02
 
+
+            .box.box-title.box--off#service-1__info
+              h1 Creamos video juegos y aplicaciones híbridas o para Android
+            .box.description.box--off#service-1__info-desc
+                h2 Modernizamos tu flujo de trabajo con tecnología que facilita tu día a día.
+            .box.box-title.box--off#service-2__info
+              h1 asdfasdfasdf
+            .box.description.box--off#service-2__info-desc
+                h2 fghjfghjfghjfghjfghj
 footer

@@ -47,23 +47,22 @@
     grid-gap: 5px;
   }
   &-services{
-    height: 80vh;
+    min-height: 100vh;
+    height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr auto;
-    grid-template-rows: 20px 1fr 180px;
+    grid-template-rows: auto 1fr 180px;
+    grid-gap: 1px;
     grid-template-areas:
     "box-title box-title box-title . number-page"
     "description description description description number-page"
     "service1 service2 service3 service4 number-page";
-    grid-gap: 1px;
   }
 }
-
 
 .box-title{
   grid-area: box-title;
 }
 .description{
-  padding-top: 10px;
   grid-area: description;
 }
 .direction{
@@ -112,4 +111,40 @@ span {
 .container-2{
   width: 100%;
   min-height: 50vh;
+}
+
+
+.services__bg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  background-image: url("../img/fondo.jpg");
+  transition: all 2s ease;
+  &--1{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    background-image: url("../img/bg-movil.jpg");
+  }
+  &--2{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+    background-image: url("../img/fondo.jpg");
+  }
+}
+
+@keyframes moving {
+  0% {opacity: 1; transform: scale3d(2);}
+  100% {opacity: 1; transform: scale3d(1);}
 }

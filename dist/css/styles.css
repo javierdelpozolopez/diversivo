@@ -54,15 +54,16 @@
   --box-shadow:   1px 1px 6px 1px rgba(64, 64, 64, 0.05); }
 
 body {
-  background-color: var(--black);
   height: 100vh; }
 
 h1 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  line-height: 3rem; }
 
 h2 {
   font-size: 2rem;
-  font-weight: 100; }
+  font-weight: 100;
+  line-height: 2.5rem; }
 
 pre {
   font-size: .7rem;
@@ -70,9 +71,11 @@ pre {
 
 @media only screen and (max-width: 780px) {
   h1 {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    line-height: 1.9rem; }
   h2 {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    line-height: 1.5rem; } }
 
 p, h1, h2, span, pre {
   color: var(--white); }
@@ -129,17 +132,17 @@ p, h1, h2, span, pre {
     grid-template-areas: ". description description . number-page" ". . . contacto number-page" ". . direction direction number-page";
     grid-gap: 5px; }
   .grid-services {
-    height: 80vh;
+    min-height: 100vh;
+    height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr auto;
-    grid-template-rows: 20px 1fr 180px;
-    grid-template-areas: "box-title box-title box-title . number-page" "description description description description number-page" "service1 service2 service3 service4 number-page";
-    grid-gap: 1px; }
+    grid-template-rows: auto 1fr 180px;
+    grid-gap: 1px;
+    grid-template-areas: "box-title box-title box-title . number-page" "description description description description number-page" "service1 service2 service3 service4 number-page"; }
 
 .box-title {
   grid-area: box-title; }
 
 .description {
-  padding-top: 10px;
   grid-area: description; }
 
 .direction {
@@ -189,14 +192,83 @@ span {
   width: 100%;
   min-height: 50vh; }
 
+.services__bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-animation-name: moving;
+          animation-name: moving;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  background-image: url("../img/fondo.jpg");
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease; }
+  .services__bg--1 {
+    -webkit-animation-name: moving;
+            animation-name: moving;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    background-image: url("../img/bg-movil.jpg"); }
+  .services__bg--2 {
+    -webkit-animation-name: moving;
+            animation-name: moving;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+    background-image: url("../img/fondo.jpg"); }
+
+@-webkit-keyframes moving {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(2);
+            transform: scale3d(2); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1);
+            transform: scale3d(1); } }
+
+@keyframes moving {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(2);
+            transform: scale3d(2); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1);
+            transform: scale3d(1); } }
+
 @media only screen and (max-width: 680px) {
   .grid-main {
     grid-template-areas: ". description description description number-page" ". . . contacto number-page" ". . direction direction number-page";
     grid-gap: 1px; }
   .grid-services {
-    height: 80vh;
     grid-template-columns: 1fr 1fr auto;
-    grid-template-rows: 20px 1fr 120px 120px;
+    grid-template-rows: auto 1fr 120px 120px;
     grid-template-areas: "box-title box-title number-page" "description description number-page" "service1 service2 number-page" "service3 service4 number-page"; }
   .service {
     font-size: .6rem; } }
+
+.box--off {
+  opacity: 0;
+  display: none; }
+
+.box--on {
+  display: inline;
+  opacity: 1; }

@@ -69,7 +69,7 @@ gulp.task('styles', ['cleanCSSfs'], function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('./dist/js/**/*.js')
+  gulp.src('./dist/js/*.js')
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./src/assets/js'))
