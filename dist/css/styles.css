@@ -197,20 +197,10 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-animation-name: moving;
-          animation-name: moving;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
   background-image: url("../img/fondo.jpg");
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease; }
-  .services__bg--1 {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .services__bg, .services__bg--1, .services__bg--2 {
     -webkit-animation-name: moving;
             animation-name: moving;
     -webkit-animation-duration: 2s;
@@ -220,18 +210,10 @@ span {
     -webkit-animation-direction: normal;
             animation-direction: normal;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .services__bg--1 {
     background-image: url("../img/bg-movil.jpg"); }
   .services__bg--2 {
-    -webkit-animation-name: moving;
-            animation-name: moving;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    animation-direction: alternate-reverse;
     background-image: url("../img/fondo.jpg"); }
 
 @-webkit-keyframes moving {

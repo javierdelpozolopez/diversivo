@@ -119,27 +119,20 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  animation-name: moving;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-direction: normal;
-  animation-fill-mode: both;
   background-image: url("../img/fondo.jpg");
-  transition: all 2s ease;
-  &--1{
+  transition: all 1s ease-in-out;
+  &,&--1,&--2{
+
     animation-name: moving;
     animation-duration: 2s;
     animation-delay: 2s;
     animation-direction: normal;
     animation-fill-mode: both;
+  }
+  &--1{
     background-image: url("../img/bg-movil.jpg");
   }
   &--2{
-    animation-name: moving;
-    animation-duration: 2s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-direction: alternate-reverse;
     background-image: url("../img/fondo.jpg");
   }
 }
