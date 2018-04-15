@@ -59,32 +59,61 @@
   align-self: stretch;
   justify-self: stretch;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding-left: 1rem;
   background-color: var(--white);
   position: relative;
-  transition: all .2s ease-in-out;
+  transition: all .5s ease-in-out;
   height: 180px;
   top: 0;
+  h5{
+    transition: all .1s ease-in-out;
+    top: 0;
+    position: relative;
+  }
   &:hover{
     padding-left: 2rem;
     height: 200px;
     top: -10px;
     background-color: var(--black);
     box-shadow: var(--box-shadow);
-    h3{
+    z-index: 20;
+    transition: all .1s ease-in-out;
+    h5{
       color: var(--white);
+      top: -20px;
+    }
+    .btn{
+      opacity: 1;
+      position: absolute;
+      top: 100px;
     }
   }
   &:active{
     background-color: var(--black);
-    h3{
+    h5{
       color: var(--white);
     }
   }
+  .btn{
+    position: absolute;
+    top: 100px;
+    opacity: 0;
+    align-self: flex-end;
+    border-bottom: 1px solid var(--white);
+    width: 100%;
+    text-align: right;
+    color: var(--white);
+    transition: all .5s ease-in-out;
+    &:hover{
+      background-color: var(--white);
+      color: var(--black);
+      }
+  }
 
-  h3{
+  h5{
     color: var(--black);
   }
   &-1{

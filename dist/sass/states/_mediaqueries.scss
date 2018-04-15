@@ -10,7 +10,7 @@
     }
     &-services{
       grid-template-columns: 1fr 1fr auto;
-      grid-template-rows: auto 1fr 120px 120px;
+      grid-template-rows: auto 1fr 100px 100px;
       grid-template-areas:
       "box-title box-title number-page"
       "description description number-page"
@@ -19,7 +19,11 @@
     }
   }
   .service{
-    font-size: .6rem;
+    height: 100px;
+    &:hover{
+      height: 120px;
+      padding-left: .8rem;
+    }
   }
 
 }
