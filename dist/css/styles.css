@@ -51,7 +51,7 @@
   --positivo:   #0acd47;
   --negativo:   #fc0000;
   --border-radius:   6px;
-  --box-shadow:   1px 1px 6px 1px rgba(64, 64, 64, 0.05); }
+  --box-shadow:   1px 1px 6px 4px rgba(0, 0, 0, 0.4); }
 
 body {
   height: 100vh; }
@@ -123,22 +123,6 @@ p, h1, h2, span, pre {
   .app footer {
     grid-area: footer; }
 
-.grid {
-  display: grid;
-  width: 100%; }
-  .grid-main {
-    grid-template-columns: 1fr 4fr 2fr 1fr auto;
-    grid-template-rows: auto;
-    grid-template-areas: ". description description . number-page" ". . . contacto number-page" ". . direction direction number-page";
-    grid-gap: 5px; }
-  .grid-services {
-    min-height: 100vh;
-    height: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr auto;
-    grid-template-rows: auto 1fr 180px;
-    grid-gap: 1px;
-    grid-template-areas: "box-title box-title box-title . number-page" "description description description description number-page" "service1 service2 service3 service4 number-page"; }
-
 .box-title {
   grid-area: box-title; }
 
@@ -173,7 +157,25 @@ p, h1, h2, span, pre {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-left: 1rem;
-  background-color: var(--white); }
+  background-color: var(--white);
+  position: relative;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 180px;
+  top: 0; }
+  .service:hover {
+    padding-left: 2rem;
+    height: 200px;
+    top: -10px;
+    background-color: var(--black);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow); }
+    .service:hover h3 {
+      color: var(--white); }
+  .service:active {
+    background-color: var(--black); }
+    .service:active h3 {
+      color: var(--white); }
   .service h3 {
     color: var(--black); }
   .service-1 {
@@ -200,7 +202,7 @@ span {
   background-image: url("../img/fondo.jpg");
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
-  .services__bg, .services__bg--1, .services__bg--2 {
+  .services__bg, .services__bg--1, .services__bg--2, .services__bg--3, .services__bg--4 {
     -webkit-animation-name: moving;
             animation-name: moving;
     -webkit-animation-duration: 2s;
@@ -215,6 +217,45 @@ span {
     background-image: url("../img/bg-movil.jpg"); }
   .services__bg--2 {
     background-image: url("../img/fondo.jpg"); }
+  .services__bg--3 {
+    background-image: url("../img/bg-web.jpg"); }
+  .services__bg--4 {
+    background-image: url("../img/bg-desarrollo.jpg"); }
+
+.grid {
+  display: grid;
+  width: 100%; }
+  .grid-main {
+    grid-template-columns: 1fr 4fr 2fr 1fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: ". description description . number-page" ". . . contacto number-page" ". . direction direction number-page";
+    grid-gap: 5px; }
+  .grid-services {
+    min-height: 100vh;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-rows: auto 1fr 180px;
+    grid-gap: 1px;
+    grid-template-areas: "box-title box-title box-title . number-page" "description description description description number-page" "service1 service2 service3 service4 number-page"; }
+
+@media only screen and (max-width: 680px) {
+  .grid-main {
+    grid-template-areas: ". description description description number-page" ". . . contacto number-page" ". . direction direction number-page";
+    grid-gap: 1px; }
+  .grid-services {
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: auto 1fr 120px 120px;
+    grid-template-areas: "box-title box-title number-page" "description description number-page" "service1 service2 number-page" "service3 service4 number-page"; }
+  .service {
+    font-size: .6rem; } }
+
+.box--off {
+  opacity: 0;
+  display: none; }
+
+.box--on {
+  display: inline;
+  opacity: 1; }
 
 @-webkit-keyframes moving {
   0% {
@@ -235,22 +276,3 @@ span {
     opacity: 1;
     -webkit-transform: scale3d(1);
             transform: scale3d(1); } }
-
-@media only screen and (max-width: 680px) {
-  .grid-main {
-    grid-template-areas: ". description description description number-page" ". . . contacto number-page" ". . direction direction number-page";
-    grid-gap: 1px; }
-  .grid-services {
-    grid-template-columns: 1fr 1fr auto;
-    grid-template-rows: auto 1fr 120px 120px;
-    grid-template-areas: "box-title box-title number-page" "description description number-page" "service1 service2 number-page" "service3 service4 number-page"; }
-  .service {
-    font-size: .6rem; } }
-
-.box--off {
-  opacity: 0;
-  display: none; }
-
-.box--on {
-  display: inline;
-  opacity: 1; }

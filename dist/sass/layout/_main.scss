@@ -34,30 +34,6 @@
   }
 }
 
-.grid{
-  display: grid;
-  width: 100%;
-  &-main{
-    grid-template-columns: 1fr 4fr 2fr 1fr auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-    ". description description . number-page"
-    ". . . contacto number-page"
-    ". . direction direction number-page";
-    grid-gap: 5px;
-  }
-  &-services{
-    min-height: 100vh;
-    height: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr auto;
-    grid-template-rows: auto 1fr 180px;
-    grid-gap: 1px;
-    grid-template-areas:
-    "box-title box-title box-title . number-page"
-    "description description description description number-page"
-    "service1 service2 service3 service4 number-page";
-  }
-}
 
 .box-title{
   grid-area: box-title;
@@ -87,6 +63,27 @@
   justify-content: flex-start;
   padding-left: 1rem;
   background-color: var(--white);
+  position: relative;
+  transition: all .2s ease-in-out;
+  height: 180px;
+  top: 0;
+  &:hover{
+    padding-left: 2rem;
+    height: 200px;
+    top: -10px;
+    background-color: var(--black);
+    box-shadow: var(--box-shadow);
+    h3{
+      color: var(--white);
+    }
+  }
+  &:active{
+    background-color: var(--black);
+    h3{
+      color: var(--white);
+    }
+  }
+
   h3{
     color: var(--black);
   }
@@ -121,7 +118,7 @@ span {
   background-attachment: fixed;
   background-image: url("../img/fondo.jpg");
   transition: all 1s ease-in-out;
-  &,&--1,&--2{
+  &,&--1,&--2,&--3,&--4{
 
     animation-name: moving;
     animation-duration: 2s;
@@ -135,9 +132,10 @@ span {
   &--2{
     background-image: url("../img/fondo.jpg");
   }
-}
-
-@keyframes moving {
-  0% {opacity: 1; transform: scale3d(2);}
-  100% {opacity: 1; transform: scale3d(1);}
+  &--3{
+    background-image: url("../img/bg-web.jpg");
+  }
+  &--4{
+    background-image: url("../img/bg-desarrollo.jpg");
+  }
 }
