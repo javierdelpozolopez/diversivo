@@ -10,6 +10,12 @@
     display: inline-block;
     line-height: 1rem;
     margin-top: 1rem;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    &:hover{
+      color: var(--white);
+      box-shadow: var(--box-shadow);
+    }
   }
 }
 .btn__more{

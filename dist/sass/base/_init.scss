@@ -17,6 +17,7 @@
   --light-grey          :   #F1F1F1;
   --medium-grey         :   #EBEBEB;
   --strong-grey         :   #616161;
+  --hover         :   #288cac;
 
   --positivo            :   #0acd47;
   --negativo            :   #fc0000;
@@ -51,6 +52,23 @@ h5{
 pre{
   font-size: .7rem;
   font-weight: 400;
+}
+
+input,textarea{
+  box-shadow: none;
+  background-color: rgba(23, 23, 23, 0.69);
+  color: var(--white);
+  padding: 1rem;
+  border-bottom: 1px solid var(--white);
+  &::placeholder{
+    color: var(--white);
+  }
+  &:hover{
+    border-bottom: 1px solid var(--hover);
+  }
+  &:focus{
+    border-bottom: 1px solid var(--positivo);
+  }
 }
 
 @media only screen and (max-width: 780px){

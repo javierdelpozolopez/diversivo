@@ -100,6 +100,7 @@
   .btn{
     position: absolute;
     top: 100px;
+    right: -1px;
     opacity: 0;
     align-self: flex-end;
     border-bottom: 1px solid var(--white);
@@ -166,5 +167,26 @@ span {
   }
   &--4{
     background-image: url("../img/bg-desarrollo.jpg");
+  }
+}
+
+.contact{
+  &__info{
+    grid-area: title;
+    width: 100%;
+  }
+  &__form{
+    grid-area: form;
+    form{
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      input,textarea{
+        display: inline-block;
+        margin-top: .8rem;
+        width: 80%;
+      }
+    }
   }
 }

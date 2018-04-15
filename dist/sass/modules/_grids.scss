@@ -21,4 +21,13 @@
     "description description description description number-page"
     "service1 service2 service3 service4 number-page";
   }
+  &-contact{
+    min-height: 80vh;
+    height: auto;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas:
+    "title form number-page";
+  }
 }

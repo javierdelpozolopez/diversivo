@@ -48,6 +48,7 @@
   --light-grey:   #F1F1F1;
   --medium-grey:   #EBEBEB;
   --strong-grey:   #616161;
+  --hover:   #288cac;
   --positivo:   #0acd47;
   --negativo:   #fc0000;
   --border-radius:   6px;
@@ -78,6 +79,26 @@ h5 {
 pre {
   font-size: .7rem;
   font-weight: 400; }
+
+input, textarea {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgba(23, 23, 23, 0.69);
+  color: var(--white);
+  padding: 1rem;
+  border-bottom: 1px solid var(--white); }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: var(--white); }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: var(--white); }
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: var(--white); }
+  input::placeholder, textarea::placeholder {
+    color: var(--white); }
+  input:hover, textarea:hover {
+    border-bottom: 1px solid var(--hover); }
+  input:focus, textarea:focus {
+    border-bottom: 1px solid var(--positivo); }
 
 @media only screen and (max-width: 780px) {
   h1 {
@@ -214,6 +235,7 @@ p, h1, h2, h3, h4, h5, span, pre {
   .service .btn {
     position: absolute;
     top: 100px;
+    right: -1px;
     opacity: 0;
     -ms-flex-item-align: end;
         align-self: flex-end;
@@ -272,6 +294,31 @@ span {
   .services__bg--4 {
     background-image: url("../img/bg-desarrollo.jpg"); }
 
+.contact__info {
+  grid-area: title;
+  width: 100%; }
+
+.contact__form {
+  grid-area: form; }
+  .contact__form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .contact__form form input, .contact__form form textarea {
+      display: inline-block;
+      margin-top: .8rem;
+      width: 80%; }
+
 .btn {
   padding: .8rem;
   margin: 1rem 0;
@@ -283,7 +330,14 @@ span {
     border-radius: 2px;
     display: inline-block;
     line-height: 1rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    cursor: pointer;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out; }
+    .btn__primary:hover {
+      color: var(--white);
+      -webkit-box-shadow: var(--box-shadow);
+              box-shadow: var(--box-shadow); }
 
 .btn__more {
   padding: 1rem;
@@ -315,6 +369,13 @@ span {
     grid-template-rows: auto 1fr 180px;
     grid-gap: 1px;
     grid-template-areas: "box-title box-title box-title . number-page" "description description description description number-page" "service1 service2 service3 service4 number-page"; }
+  .grid-contact {
+    min-height: 80vh;
+    height: auto;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas: "title form number-page"; }
 
 @media only screen and (max-width: 680px) {
   .grid-main {
