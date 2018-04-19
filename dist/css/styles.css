@@ -275,7 +275,7 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("../img/fondo.jpg");
+  background-image: url("../img/bg-fondo.jpg");
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
   .services__bg, .services__bg--1, .services__bg--2, .services__bg--3, .services__bg--4 {
@@ -389,11 +389,25 @@ span {
     grid-template-columns: 1fr 1fr auto;
     grid-template-rows: auto 1fr 100px 100px;
     grid-template-areas: "box-title box-title number-page" "description description number-page" "service1 service2 number-page" "service3 service4 number-page"; }
+  .grid-contact {
+    grid-template-columns: 1fr auto;
+    grid-gap: 0px;
+    grid-template-areas: "title number-page" "form number-page"; }
   .service {
     height: 100px; }
     .service:hover {
       height: 120px;
-      padding-left: .8rem; } }
+      padding-left: .8rem; }
+    .service .btn {
+      top: 100px;
+      right: 0px;
+      border-bottom: 1px solid var(--white);
+      background-color: #3b3b3b; }
+      .service .btn:hover {
+        background-color: var(--white);
+        color: var(--black); }
+  .contact__form {
+    padding: 0; } }
 
 .box--off {
   opacity: 0;
