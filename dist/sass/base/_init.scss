@@ -9,11 +9,11 @@
   font-family: 'Aileron';
 
   --primary-color       :   #e4e4e4;
-  --secondary-color     :   #17BA98;
+  --secondary-color     :   #17BA98;  
   --btn-primary-color   :   #00995d;
   --link-primary-color  :   #1EACD9;
   --white               :   #FFFFFF;
-  --black               :   #292828;
+  --black               :   #252525;
   --light-grey          :   #F1F1F1;
   --medium-grey         :   #EBEBEB;
   --strong-grey         :   #616161;
@@ -28,6 +28,14 @@
 
 body{
   height: 100vh;
+}
+
+h1,h2,h3,h4,h5,pre,p{
+  animation-name: show-from-bottom;
+      animation-duration: 2s;
+      animation-delay: 2.5s;
+      animation-direction: normal;
+      animation-fill-mode: both;
 }
 
 h1{

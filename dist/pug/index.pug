@@ -15,13 +15,15 @@ html(lang="es")
 
     main.container
       h1 Agencia de <br>Estrategia Digital
-      .main-content.grid.grid-main
+      h2 Ofrecemos servicios integrales <br>en medios digitales.
+      .main-content.grid.grid-main.bg-hero
           .box.description
-              h2 Ofrecemos servicios integrales <br>en medios digitales.
-          .box.contacto
-              p
-              span hola@diversivo.cl
-              pre Somos parte de Disecom
+
+          .box.hero-image
+            img.absolute(src="assets/img/hero-image-3.png", alt="hero-img")
+            img.absolute(src="assets/img/hero-image-2.png", alt="hero-img")
+            img.absolute(src="assets/img/hero-image.png", alt="hero-img")
+           
           .box.number-page
                 p
                   span 01
@@ -29,21 +31,21 @@ html(lang="es")
       article.container-2
         .main-content.grid.grid-services
             .box.box-title.services#services
-              h1 Servicios
+              h3 Servicios
             .box.description.services#services-desc
-              h2 Todos te van a decir que son los mejores. Nosotros la tenemos clara: Lo que nos hace diferentes es una sola cosa; Nunca nos Aburrimos.
-            .box.service.service-1#service-1
+              h4 Todos te van a decir que son los mejores. Nosotros la tenemos clara: Lo que nos hace diferentes es una sola cosa; Nunca nos Aburrimos.
+            .box.service.service-1#apps
               h5 App´s <br>y Video juegos
-              a.btn(href="#" name="cotizar") Cotizar
-            .box.service.service-2#service-2
+              
+            .box.service.service-2#rrss
               h5 Marketing <br>y Social Media
-              a.btn(href="#" name="cotizar") Cotizar
-            .box.service.service-3#service-3
+             
+            .box.service.service-3#web
               h5 Desarrollo <br> y diseño Web
-              a.btn(href="#" name="cotizar") Cotizar
-            .box.service.service-4#service-4
+              
+            .box.service.service-4#software
               h5 Programación y <br>software
-              a.btn(href="#" name="cotizar") Cotizar
+              
               
             .box.number-page
                   p
@@ -51,22 +53,9 @@ html(lang="es")
 
 
             .box.box-title.box--off#service-1__info
-              h3 Creamos video juegos y aplicaciones híbridas o para Android
+              h3 
             .box.description.box--off#service-1__info-desc
-              h4 Modernizamos tu flujo de trabajo con tecnología que facilita tu día a día.
-              //-a.btn.btn__more(href="#" name="cotizar") Ver más
-            .box.box-title.box--off#service-2__info
-              h3 Lleva tu marca a una fauna digital
-            .box.description.box--off#service-2__info-desc
-              h4 Conéctate comparte, y manda uno que otro emoticon :).
-            .box.box-title.box--off#service-3__info
-              h3 Creamos y administramos sitios web sin mentirle a nadie.
-            .box.description.box--off#service-3__info-desc
-              h4 Desde sitios de alto tráfico a pequeñas pymes que quieren darse a conocer.
-            .box.box-title.box--off#service-4__info
-              h3 Frontend y Backend a tus servicios.
-            .box.description.box--off#service-4__info-desc
-              h4 Creamos y desarrollamos tecnología en base a tus necesidades. 
+              h4 
               
       article.container-3
         .main-content.grid.grid-contact

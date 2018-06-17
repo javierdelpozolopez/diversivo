@@ -4,7 +4,7 @@
     &-main{
       grid-template-areas:
       ". description description description number-page"
-      ". . . contacto number-page"
+      "hero-image hero-image hero-image hero-image number-page"
       ". . direction direction number-page";
       grid-gap: 1px;
     }

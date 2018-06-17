@@ -32,7 +32,7 @@ gulp.task('watch:all', ['watch']);
 
 gulp.task('watch', function() {
   gulp.watch('./dist/sass/**/*.scss', ['styles']);
-  gulp.watch('./dist/js/**/*.js', ['scripts']);
+
   gulp.watch('./dist/pug/**/*.pug', ['pug']);
   gulp.watch('./src/**.html').on('change', reload);
 });
@@ -66,14 +66,6 @@ gulp.task('styles', ['cleanCSSfs'], function() {
     .pipe(gulp.dest('./src/assets/css'))
     .pipe(notify({ message: 'CSS - task completed'}))
     .pipe(browserSync.stream());
-});
-
-gulp.task('scripts', function() {
-  gulp.src('./dist/js/*.js')
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./src/assets/js'))
-    .pipe(notify({ message: 'JS - task completed'}))
 });
 
 gulp.task('cleanCSSfs', function() {

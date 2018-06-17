@@ -44,7 +44,7 @@
   --btn-primary-color:   #00995d;
   --link-primary-color:   #1EACD9;
   --white:   #FFFFFF;
-  --black:   #292828;
+  --black:   #252525;
   --light-grey:   #F1F1F1;
   --medium-grey:   #EBEBEB;
   --strong-grey:   #616161;
@@ -56,6 +56,18 @@
 
 body {
   height: 100vh; }
+
+h1, h2, h3, h4, h5, pre, p {
+  -webkit-animation-name: show-from-bottom;
+          animation-name: show-from-bottom;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 h1 {
   font-size: 3rem;
@@ -133,12 +145,25 @@ p, h1, h2, h3, h4, h5, span, pre {
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 20px auto 20px;
-  grid-template-rows: 50px auto 20px;
+  grid-template-rows: 80px auto 20px;
+  background-color: var(--black);
   grid-template-areas: ". header ." ". main ." ". footer ."; }
   .app header.container__header {
     grid-area: header;
     -ms-flex-item-align: center;
-        align-self: center; }
+        align-self: center;
+    padding: 1rem 0rem; }
+    .app header.container__header .logo {
+      -webkit-animation-name: show-from-bottom;
+              animation-name: show-from-bottom;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s;
+      -webkit-animation-delay: .5s;
+              animation-delay: .5s;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
   .app main.container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -153,9 +178,33 @@ p, h1, h2, h3, h4, h5, span, pre {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 2rem;
+    padding: 3rem;
     grid-area: main;
-    border: 3px solid var(--white); }
+    border: 1px solid var(--white);
+    -webkit-animation-name: show-right-to-left;
+            animation-name: show-right-to-left;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+    .app main.container h1 {
+      -webkit-animation-name: show-from-bottom;
+              animation-name: show-from-bottom;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 2.5s;
+              animation-delay: 2.5s;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+      z-index: 1000; }
+    .app main.container h2 {
+      z-index: 1000; }
     .app main.container .main-content {
       margin-top: 1rem;
       min-height: 60vh; }
@@ -275,28 +324,20 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("../img/bg-fondo.jpg");
   -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out; }
-  .services__bg, .services__bg--1, .services__bg--2, .services__bg--3, .services__bg--4 {
+  transition: all 1s ease-in-out;
+  background-image: url("../img/fondo-trasparente.png"); }
+  .services__bg {
     -webkit-animation-name: moving;
             animation-name: moving;
     -webkit-animation-duration: 2s;
             animation-duration: 2s;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
     -webkit-animation-direction: normal;
             animation-direction: normal;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both; }
-  .services__bg--1 {
-    background-image: url("../img/bg-movil.jpg"); }
-  .services__bg--2 {
-    background-image: url("../img/fondo.jpg"); }
-  .services__bg--3 {
-    background-image: url("../img/bg-web.jpg"); }
-  .services__bg--4 {
-    background-image: url("../img/bg-desarrollo.jpg"); }
 
 .contact__info {
   grid-area: title;
@@ -322,6 +363,38 @@ span {
       display: inline-block;
       margin-top: .8rem;
       width: 80%; }
+
+.hero-image {
+  grid-area: hero-image;
+  position: relative; }
+  .hero-image img {
+    position: absolute;
+    width: 90%;
+    max-width: 440px;
+    bottom: -50%;
+    right: 1%;
+    left: auto;
+    -webkit-animation-name: show-from-bottom-whith-motion;
+            animation-name: show-from-bottom-whith-motion;
+    -webkit-animation-duration: 3.5s;
+            animation-duration: 3.5s;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    right: 5%;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+    .hero-image img:nth-child(1) {
+      bottom: -90%;
+      right: 10%;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s; }
+    .hero-image img:nth-child(3) {
+      bottom: 10%;
+      right: 0%;
+      -webkit-animation-delay: 7s;
+              animation-delay: 7s; }
 
 .btn {
   padding: .8rem;
@@ -364,7 +437,7 @@ span {
   .grid-main {
     grid-template-columns: 1fr 4fr 2fr 1fr auto;
     grid-template-rows: auto;
-    grid-template-areas: ". description description . number-page" ". . . contacto number-page" ". . direction direction number-page";
+    grid-template-areas: "description description . . number-page" "hero-image hero-image hero-image hero-image number-page" ". . direction direction number-page";
     grid-gap: 5px; }
   .grid-services {
     min-height: 100vh;
@@ -383,7 +456,7 @@ span {
 
 @media only screen and (max-width: 680px) {
   .grid-main {
-    grid-template-areas: ". description description description number-page" ". . . contacto number-page" ". . direction direction number-page";
+    grid-template-areas: ". description description description number-page" "hero-image hero-image hero-image hero-image number-page" ". . direction direction number-page";
     grid-gap: 1px; }
   .grid-services {
     grid-template-columns: 1fr 1fr auto;
@@ -421,18 +494,80 @@ span {
   0% {
     opacity: 1;
     -webkit-transform: scale3d(2);
-            transform: scale3d(2); }
+            transform: scale3d(2);
+    -webkit-filter: blur(5px);
+            filter: blur(5px); }
   100% {
     opacity: 1;
     -webkit-transform: scale3d(1);
-            transform: scale3d(1); } }
+            transform: scale3d(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px); } }
 
 @keyframes moving {
   0% {
     opacity: 1;
     -webkit-transform: scale3d(2);
-            transform: scale3d(2); }
+            transform: scale3d(2);
+    -webkit-filter: blur(5px);
+            filter: blur(5px); }
   100% {
     opacity: 1;
     -webkit-transform: scale3d(1);
-            transform: scale3d(1); } }
+            transform: scale3d(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px); } }
+
+@-webkit-keyframes show-right-to-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: skew(1deg, 1deg);
+            transform: skew(1deg, 1deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: skew(0, 0);
+            transform: skew(0, 0); } }
+
+@keyframes show-right-to-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: skew(1deg, 1deg);
+            transform: skew(1deg, 1deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: skew(0, 0);
+            transform: skew(0, 0); } }
+
+@-webkit-keyframes show-from-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10);
+            transform: translateY(-10); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes show-from-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10);
+            transform: translateY(-10); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes show-from-bottom-whith-motion {
+  0% {
+    opacity: 0;
+    bottom: 20%; }
+  100% {
+    opacity: 1; } }
+
+@keyframes show-from-bottom-whith-motion {
+  0% {
+    opacity: 0;
+    bottom: 20%; }
+  100% {
+    opacity: 1; } }
